@@ -3,90 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exposition temporaire - Le mystere des anneaux</title>
+    <title>Musee | Le mystere des anneaux</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Manrope:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
-  <body class="expo-theme">
-    <main class="container detail-page">
-      <section class="detail-bandeau">
-        <p class="eyebrow">Exposition temporaire</p>
-        <h1>Le mystere des anneaux</h1>
-        <ul>
-          <li><strong>Dates :</strong> 11/04/2026</li>
-          <li><strong>Lieu :</strong> Musée des Confluences a Lyon</li>
-        </ul>
-      </section>
+  <body class="theme-detail theme-musee">
+    <div class="page-glow" aria-hidden="true"></div>
+    <div class="progress-bar" data-reading-progress aria-hidden="true"></div>
 
-      <div class="musee-sections">
-      <section class="detail-content musee-box">
-        <h2>L'Expédition</h2>
-        <p>
-        L’exposition retrace une expédition scientifique et humaine hors du commun menée au large du cap Corse. L’objectif était de percer le mystère de centaines de formations circulaires parfaites, des « anneaux », s'étendant à 120 mètres de fond. Le parcours nous fait découvrir la genèse du projet et le travail des plongeurs-photographes pour documenter ce paysage sous-marin inconnu, situé entre la surface et les abysses.  
-        </p>
-      </section>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html" aria-label="Retour a l'accueil">
+          <span class="brand-dot"></span>
+          <span>Accueil</span>
+        </a>
 
-      <section class="detail-content musee-box">
-        <h2>L'Expérience Sensorielle</h2>
-        <h3>L'obscurité abyssale :</h3>
-        <p>
-        Le visiteur est plongé dans une obscurité quasi totale avec des murs bleu marine. Ce choix crée un « effet aquarium » saisissant où seules les œuvres sont vivement éclairées, simulant la vision qu'aurait un plongeur éclairant le fond marin avec sa lampe.  
-        </p>
+        <button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="main-nav">
+          Menu
+        </button>
 
-        <h3>Le monde du silence :</h3>
-        <p>
-          Un univers sonore discret diffusant des bruits d'eau et de mer enveloppe les salles. Cette dimension sonore transforme la visite en une véritable plongée physique et renforce la sensation de flottement.
-        </p>
-
-        <h3>Focus sur les images et les volumes :</h3>
-        <p>
-          Le parcours utilise des dispositifs marquants, comme une grande affiche verticale montrant la distance vertigineuse (120 mètres) entre le bateau en surface et le fond. Dans la salle centrale, les murs deviennent ronds et les images sont suspendues pour épouser la forme des mystérieux anneaux.
-        </p>
-      </section>
-
-      <section class="detail-content musee-box">
-        <h2>Analyse Critique</h2>
-        <p>
-          L'exposition réussit à transformer une recherche scientifique complexe en une expérience sensorielle. En utilisant une architecture circulaire et des supports visuels originaux, la scénographie place le visiteur au cœur du mystère : on ne regarde plus l'anneau de l'extérieur, on l'habite. En privilégiant l'émotion et le mystère plutôt que le simple documentaire, le musée permet au public de s'approprier ce patrimoine naturel invisible et lointain. La visite se conclut par un film pédagogique qui apporte les clés scientifiques sur la formation de ces cercles millénaires.
-        </p>
-      </section>
-
-      <section class="detail-content musee-box">
-        <h2>Impressions</h2>
-        <p>
-          J’ai trouvé cette visite fascinante et presque hypnotique. La capacité de la scénographie à nous faire oublier le monde extérieur pour nous transporter dans un environnement aussi étranger est impressionnante. Ce sentiment de mystère résolu par l'effort humain rejoint la dimension onirique et la quête de sens que j'ai pu observer tout au long de mon parcours culturel.
-        </p>
-      </section>
-
-      <p>Note : &starf;&starf;&star;&star;&star;</p>
+        <nav id="main-nav" class="main-nav" aria-label="Navigation principale">
+          <a href="theatre.html">Theatre</a>
+          <a href="danse.html">Danse</a>
+          <a class="active" href="musee.html">Musee</a>
+        </nav>
       </div>
+    </header>
 
+    <main class="container main-content">
+      <article class="story">
+        <header class="story-head reveal">
+          <p class="kicker">Exposition temporaire</p>
+          <h1>Le mystere des anneaux</h1>
+          <ul class="meta-chips">
+            <li>Date: 11 avril 2026</li>
+            <li>Lieu: Musee des Confluences, Lyon</li>
+          </ul>
+        </header>
+
+        <section class="story-panel reveal" id="expedition">
+          <h2>L'expedition</h2>
+          <p>
+            L'exposition retrace une expedition scientifique et humaine hors du commun menee au large du cap Corse.
+            L'objectif etait de percer le mystere de centaines de formations circulaires parfaites, des anneaux,
+            s'etendant a 120 metres de fond. Le parcours nous fait decouvrir la genese du projet et le travail des
+            plongeurs-photographes pour documenter ce paysage sous-marin inconnu, situe entre la surface et les abysses.
+          </p>
+        </section>
+
+        <section class="story-panel reveal" id="sensoriel">
+          <h2>L'experience sensorielle</h2>
+          <h3>L'obscurite abyssale</h3>
+          <p>
+            Le visiteur est plonge dans une obscurite quasi totale avec des murs bleu marine. Ce choix cree un effet
+            aquarium saisissant ou seules les oeuvres sont vivement eclairees, simulant la vision qu'aurait un plongeur
+            eclairant le fond marin avec sa lampe.
+          </p>
+
+          <h3>Le monde du silence</h3>
+          <p>
+            Un univers sonore discret diffusant des bruits d'eau et de mer enveloppe les salles. Cette dimension sonore
+            transforme la visite en une veritable plongee physique et renforce la sensation de flottement.
+          </p>
+
+          <h3>Focus sur les images et les volumes</h3>
+          <p>
+            Le parcours utilise des dispositifs marquants, comme une grande affiche verticale montrant la distance
+            vertigineuse (120 metres) entre le bateau en surface et le fond. Dans la salle centrale, les murs deviennent
+            ronds et les images sont suspendues pour epouser la forme des mysterieux anneaux.
+          </p>
+        </section>
+
+        <section class="story-panel reveal" id="analyse">
+          <h2>Analyse critique</h2>
+          <p>
+            L'exposition reussit a transformer une recherche scientifique complexe en une experience sensorielle. En
+            utilisant une architecture circulaire et des supports visuels originaux, la scenographie place le visiteur
+            au coeur du mystere: on ne regarde plus l'anneau de l'exterieur, on l'habite. En privilegiant l'emotion et
+            le mystere plutot que le simple documentaire, le musee permet au public de s'approprier ce patrimoine
+            naturel invisible et lointain. La visite se conclut par un film pedagogique qui apporte les cles
+            scientifiques sur la formation de ces cercles millenaires.
+          </p>
+        </section>
+
+        <section class="story-panel reveal" id="impressions">
+          <h2>Impressions</h2>
+          <p>
+            J'ai trouve cette visite fascinante et presque hypnotique. La capacite de la scenographie a nous faire
+            oublier le monde exterieur pour nous transporter dans un environnement aussi etranger est impressionnante.
+            Ce sentiment de mystere resolu par l'effort humain rejoint la dimension onirique et la quete de sens que
+            j'ai pu observer tout au long de mon parcours culturel.
+          </p>
+          <p class="rating">Note: <span aria-label="2 etoiles sur 5">★★☆☆☆</span></p>
+        </section>
+      </article>
     </main>
 
-    <aside class="works-side-nav" aria-label="Navigation des oeuvres">
-      <a class="home-icon-link" href="index.html" aria-label="Retour a l'accueil">
-        <svg viewBox="0 0 576 512" width="26" height="26" aria-hidden="true" focusable="false">
-          <path fill="currentColor" d="M575.8 255.5c0 18-15 32.1-32 32.1H512v192.3c0 17.7-14.3 32.1-32 32.1H352V384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v128H96c-17.7 0-32-14.3-32-32V287.6H32c-17.8 0-32-14.3-32-32.1c0-9 3.8-17.5 10.4-23.5L266.4 8.5c12.3-11.3 30.9-11.3 43.2 0l256 223.5c6.5 6 10.2 14.5 10.2 23.5z"/>
-        </svg>
-      </a>
-      <a class="work-thumb-link" href="theatre.html" aria-label="Aller a la page Theatre">
-        <img src="Images/Accueil_prince.WEBP" alt="Theatre" />
-      </a>
-      <a class="work-thumb-link" href="danse.html" aria-label="Aller a la page Danse">
-        <img src="Images/Accueil_danse.WEBP" alt="Danse" />
-      </a>
-      <a class="work-thumb-link is-active" href="musee.html" aria-label="Aller a la page Musee">
-        <img src="Images/expo.JPG" alt="Musee" />
-      </a>
-    </aside>
-
     <footer class="site-footer">
-    <p>MOUREL Alexandra - Université Lumière Lyon 2 - L3 Sciences de l'Éducation - Pratiques Culturelles - TD004 PERZO Laurianne - Avril 2026</p>
+      <p>
+        MOUREL Alexandra · Universite Lumiere Lyon 2 · L3 Sciences de l'Education · Pratiques Culturelles · TD004 PERZO
+        Laurianne · Avril 2026
+      </p>
     </footer>
   </body>
 </html>
