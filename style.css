@@ -36,7 +36,8 @@ body.theatre-theme {
 }
 
 body.danse-theme {
-  background: #e7e7ea;
+  background: #e8ddff;
+  /* */
 }
 
 body.expo-theme {
@@ -116,12 +117,13 @@ body.expo-theme .site-footer {
 }
 
 .hero p {
+    text-align : justify;
   margin: 0;
-  max-width: 70ch;
   line-height: 1.55;
 }
 
 .cards-section h2 {
+  font-family: "Montserrat", serif;
   font-size: 1.1rem;
   margin: 0 0 1rem;
 }
@@ -248,7 +250,7 @@ body.expo-theme .detail-link {
 
 .detail-content h2,
 .detail-content h3 {
-  font-family: "Fraunces", serif;
+  font-family: "Arial", serif;
   margin-top: 1.2rem;
 }
 
@@ -296,9 +298,7 @@ body.theatre-theme .detail-bandeau {
   background: #ebdc84;
 }
 
-body.danse-theme .detail-bandeau {
-  background: #d2d2d8;
-}
+
 
 body.expo-theme .detail-bandeau {
   background: #002395;
@@ -309,8 +309,12 @@ body.danse-theme .danse-box {
   width: 100%;
   margin: 0;
   border: none;
-  background: #e8ddff;
+  background: #f3effc;
   box-shadow: 0 10px 22px rgba(78, 54, 117, 0.14);
+}
+
+body.danse-theme .detail-bandeau {
+  background: #8484bb;
 }
 
 body.expo-theme .musee-box {
@@ -347,10 +351,11 @@ body.expo-theme .musee-box strong {
 
 .act-card,
 .sensory-card {
-  border: 1px solid #d6d9de;
+  border: 1px solid #8484bb;
+  /* HERE */
   border-radius: 12px;
-  padding: 0.7rem;
-  background: rgba(255, 255, 255, 0.85);
+ /* padding: 0.7rem;*/
+  background: #e8ddff;
 }
 
 .act-card {
@@ -362,6 +367,7 @@ body.expo-theme .musee-box strong {
 
 .act-card:nth-child(even) {
   grid-template-columns: 1fr minmax(240px, 32%);
+  padding-left: 15px;
 }
 
 .act-card:nth-child(even) img {
@@ -385,11 +391,11 @@ body.expo-theme .sensory-card {
   grid-row: 1 / span 2;
   width: 100%;
   aspect-ratio: 4 / 3;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  /*object-fit: contain;*/
   object-position: center;
   border-radius: 8px;
-  background: #ffffff;
+
 }
 
 .act-card h3,
@@ -449,10 +455,6 @@ body.expo-theme .sensory-card {
   color: #1b88ac;
 }
 
-body.expo-theme .home-icon-link {
-  background: rgba(18, 52, 84, 0.9);
-  color: #b7dcff;
-}
 
 .work-thumb-link img {
   width: 100%;
@@ -557,4 +559,9 @@ span.typeOeuvre {
     grid-column: 1;
     grid-row: auto;
   }
+}
+
+.gold {
+    color : #FFD700;
+
 }
