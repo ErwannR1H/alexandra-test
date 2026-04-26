@@ -158,7 +158,7 @@ body {
 }
 
 .main-content {
-  padding-block: 2rem 3rem;
+  padding-block: 0 ;
 }
 
 .home-hero,
@@ -167,8 +167,9 @@ body {
 .work-card,
 .timeline article {
   background: color-mix(in srgb, var(--surface) 90%, transparent);
-  border: 1px solid color-mix(in srgb, var(--line) 90%, transparent);
-  box-shadow: var(--shadow);
+  /*border: 1px solid color-mix(in srgb, var(--line) 90%, transparent);*/
+ /*TODO HERE : mettre l'ombre à gauche et droite mais pas en haut et en bas.*/
+  /* box-shadow: var(--shadow);*/
 }
 
 .home-hero {
@@ -313,12 +314,12 @@ h1 {
 
 .story {
   display: grid;
-  gap: 1rem;
+  /*gap: 1rem;*/
 }
 
 .story-head {
   padding: clamp(1.2rem, 2vw, 1.9rem);
-  border-radius: var(--radius-xl);
+  /*border-radius: var(--radius-xl);*/
 }
 
 .meta-chips {
@@ -330,8 +331,18 @@ h1 {
 }
 
 .story-panel {
-  border-radius: var(--radius-lg);
+  /*border-radius: var(--radius-lg);*/
   padding: clamp(1rem, 1.8vw, 1.5rem);
+}
+
+.story-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left:10%;
+    width:80%;
+    height : 4px;
+    background-color:var(--bg);
 }
 
 .story-panel h2 {
@@ -348,6 +359,7 @@ h1 {
   margin: 0;
   color: color-mix(in srgb, var(--ink) 90%, var(--muted));
   line-height: 1.7;
+  text-align : justify;
 }
 
 .story-panel p + p {
@@ -384,7 +396,7 @@ h1 {
 }
 
 .site-footer {
-  margin-top: 2.2rem;
+  margin-top: 0;
   border-top: 1px solid color-mix(in srgb, var(--line) 95%, transparent);
   padding: 1.2rem;
   text-align: center;
